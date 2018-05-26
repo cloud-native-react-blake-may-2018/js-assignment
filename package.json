@@ -1,0 +1,16 @@
+{
+  "name": "javascript-assignments",
+  "version": "1.0.0",
+  "description": "",
+  "main": "packet.js",
+  "scripts": {
+    "start": "babel-watch packet.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-watch": "^2.0.7"
+  }
+}
