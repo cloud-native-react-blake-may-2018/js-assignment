@@ -252,28 +252,33 @@
 // Print length
 // The lengths should be the same.
 
-function deleteElement(someArr){
+// function deleteElement(someArr){
 
-let newArr =new Array(someArr.length)
-let shifterArr = new Array(someArr.length )
-for( let i=0 ; i < someArr.length; i++){
-    if(i!=2 ){
-    newArr[i]=someArr[i];
-    }
-    
+// let newArr =new Array(someArr.length)
+ 
+// for( let i=0 ; i < someArr.length; i++){
+//         if(i>=2){
+//         newArr[i]=someArr[i+1];
 
-}
+//         } else {
 
-console.log(`array before delete :${someArr} length : ${someArr.length}`);
-console.log(`arraey after delete :${newArr} length : ${newArr.length}`);
+//         newArr[i]=someArr[i];
 
-}
+//         }
+//     }   
+ 
 
-someArr=new Array();
+// console.log(`array before delete :${someArr} length : ${someArr.length}`);
+// console.log(`arraey after delete :${newArr} length : ${newArr.length}`);
+ 
 
-someArr=[1,2,3,4,5];
+// }
 
-deleteElement(someArr);
+// someArr=new Array();
+
+// someArr=[1,2,3,4,5];
+
+// deleteElement(someArr);
 
 
 
@@ -285,13 +290,73 @@ deleteElement(someArr);
 // The lengths should be one less than the original length.
 
 
+// function spliceElement(someArr){
+
+// let newArr =new Array()
+ 
+// for( let i=0 ; i < someArr.length-1; i++){
+//         if(i>=2){
+//         newArr[i]=someArr[i+1];
+
+//         } else {
+
+//         newArr[i]=someArr[i];
+
+//         }
+//     }   
+ 
+
+// console.log(`array before splice :${someArr} length : ${someArr.length}`);
+// console.log(`arraey after splice :${newArr} length : ${newArr.length}`);
+ 
+
+// }
+
+// someArr=new Array();
+
+// someArr=[1,2,3,4,5];
+
+// spliceElement(someArr);
+
+
+
 // 12. Defining an object using a constructor
 // Define a function Person(name, age)
 // The following line should set a Person object to the variable john:
 //     var john = new Person("John", 30);
 
+// function Person(name, age) {
+//     this.name = name;
+//     this.age = age;
+// }
+
+// let john =new Person ('John',30);
+
+// console.log(john);
 
 // 13. Defining an object using an object literal
 // Define function getPerson(name, age)
 // The following line should set a Person object to the variable john:
-//     var john = getPerson("John", 30);
+// var john = getPerson("John", 30);
+
+
+
+
+// function getPerson (inName,inAge){
+//     // person = [inName , inAge];
+//     // return person;
+//     let person={
+
+//         name:inName,
+//         age:inAge
+
+
+//     }   
+//     return person; 
+    
+// }
+ 
+// let john = getPerson('John',30);
+
+
+// console.log(john)
