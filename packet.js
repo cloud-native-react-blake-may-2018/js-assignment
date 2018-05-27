@@ -98,15 +98,20 @@
 // Define function: isEven(someNum)
 // Return true if even, false if odd.
 // Do not use % operator.
-// function isEven(someNum){
-//     console.log(someNum/2)
-//     if (someNum/2){
-        
-//     }else{
-
+//  function isEven(someNum){
+//      let iNum = someNum;
+//     for (let i=0; i < (someNum/2); i++){
+//         iNum = iNum - 2;
+//     }
+//     if (iNum === 0){
+//         return true;
+//         //console.log(someNum + ' is even.')
+//     } else {
+//         return false;
+//         //console.log(someNum + ' is odd.')
 //     }
 // }
-// isEven(13);
+// console.log(isEven(3));
 
 // 7. Palindrome
 // Define function isPalindrome(someStr)
@@ -186,15 +191,16 @@
 //             console.log('Invalid shape!')
 //     }
 // }
-// printShape('diamond', 11, "%");
+// printShape('square', 9, "$");
+
 
 // 9. Object literal
 // Define function traverseObject(someObj)
 // Print every property and it's value.
-function traverseObject(someObj){
+// function traverseObject(someObj){
 
-}
-traverseObject(someObj);
+// }
+// traverseObject(someObj);
 
 // 10. Delete Element
 // Define function deleteElement(someArr)
