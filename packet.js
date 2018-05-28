@@ -298,7 +298,6 @@ function traverseObject(someObj){
     for (let prop in someObj){
         console.log(prop + " is "+ someObj[prop])
     }
-
 }
 
 // 10. Delete Element
@@ -321,8 +320,6 @@ function deleteElement(someArr){
 // Print length
 // The lengths should be one less than the original length.
 
-someArr = [1, 2, 3,4,5]
-
 function spliceElement(someArr){
     console.log(`length of array: ${someArr.length}`)
     newArr = []
@@ -337,7 +334,7 @@ function spliceElement(someArr){
         newArr[itr] = someArr[itr]  
         itr++  
     }
-    console.log(newArr)
+    console.log(`new array length is ${newArr.length}`)
 
 }
 
