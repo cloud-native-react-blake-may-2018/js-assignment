@@ -190,8 +190,6 @@ function printShape(shape, height, character){
     if (shape == "Diamond"){
         choice = 2}
 
-
-        //Im not using this right lulz
     switch(choice){
         case 0:
             //Square
