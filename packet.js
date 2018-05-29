@@ -34,8 +34,6 @@ function bubbleSort(numArray) {
     }
     return numArray; 
 }
-// let myArray2 = [65, 13, 0, 28, 4];
-// console.log(bubbleSort(myArray2)); 
 
 // 3. Reverse String
 // Define function: reverseStr(someStr)
@@ -47,7 +45,7 @@ function reverseStr(someStr) {
     }
     return newStr; 
 }
-//console.log(reverseStr('Charlie Brown')); 
+
 
 // 4. Factorial
 // Define function: factorial(someNum)
@@ -61,7 +59,7 @@ function factorial(someNum) {
     }
     return fac;
 }
-//console.log(factorial(5)); //This does not actually use recursion. I have seen it before... 
+ 
 
 // 5. Substring
 // Define function substring(someStr, length, offset)
@@ -79,9 +77,7 @@ function substring(someStr, length, offset) {
     }
     return newStr; 
 }
-// console.log(substring('JasperJohannes', 5, 10));
-// console.log(substring('JasperJohannes', 5, 15));
-// console.log(substring('JasperJohannes', 15, 10));
+
 
 // 6. Even Number
 // Define function: isEven(someNum)
@@ -94,9 +90,7 @@ function isEven(someNum) {
         
     } else return false; 
 }  
-// console.log(isEven(17)); 
-// console.log(isEven(42)); 
-// console.log(isEven(20.15)); 
+ 
 
 // 7. Palindrome
 // Define function isPalindrome(someStr)
@@ -123,8 +117,7 @@ function isPalindrome(str) {
     }
     return palindrome; 
 } 
-//console.log(isPalindrome('Step On No Pets')); 
-//console.log(isPalindrome('Ma has a Ham')); 
+ 
 
 // 8. Shapes
 // Define function: printShape(shape, height, character)
@@ -202,20 +195,18 @@ function printShape(shape, height, character) {
         Try 'Square', 'Triangle', or 'Diamond'.`); 
     }
 }
-//printShape('Square', 3, 0); 
-//printShape('Triangle', 7, 0); 
-// printShape('Diamond', 9, '@'); 
-// printShape('Diamond', 6, '%'); 
-//printShape('Purple', 4, 'Q'); 
 
 // 9. Object literal
 // Define function traverseObject(someObj)
 // Print every property and its value.
 function traverseObject(someObj) {
-    console.log(someObj); 
+    for(var propertyName in someObj) {
+        console.log(propertyName + ':');
+        console.log(someObj[propertyName]);
+     }
+    
 }
 
-traverseObject(new Person('Ruthanna', 23)); 
 
 // 10. Delete Element
 // Define function deleteElement(someArr)
@@ -243,8 +234,7 @@ function spliceElement(someArr) {
     someArr.splice(2, 1);
     console.log(`The final length of the array is ${someArr.length}`);
 }
-//let myArr = [8, 6, 4, 2, 0];
-//spliceElement(myArr); 
+ 
 
 // 12. Defining an object using a constructor
 // Define a function Person(name, age)
@@ -253,8 +243,7 @@ function Person(name, age) {
     this.name = name; 
     this.age = age; 
 }
-// var john = new Person("John", 30);
-// 
+
 
 // 13. Defining an object using an object literal
 // Define function getPerson(name, age)
@@ -268,5 +257,3 @@ function getPerson(name, inAge) {
     personLit.age = inAge; 
     return personLit; 
 }
-// var john = getPerson("John", 30);
-// console.log(john); 
