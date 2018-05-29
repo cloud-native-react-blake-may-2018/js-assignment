@@ -1,14 +1,21 @@
 // 1. Fibonacci
 // Define function: fib(n) 
 // Return the nth number in the fibonacci sequence.
-function fib(n){
-    let num1=0;
-    let num2=1;
-    let fib=0;
-    while(fib<n){
-        fib=num1 + num2;
+function fib(n) {
+    let array = [0, 1];
+  
+    if (n <= 2){
+        return 1;
+    } 
+    
+    for (let i = 2; i <= n; i++) {
+      array[i] = array[i - 1] + array[i - 2];
     }
-}
+  
+    return array[n];
+  }
+
+  console.log(fib(10));
 // 2. Bubble Sort
 // Define function: bubbleSort(numArray)
 // Use the bubble sort algorithm to sort the array.
@@ -142,9 +149,7 @@ function printShape(shape, height, character){
         }
         break;
     case 'Diamond':
-
         break;
-    }
 }
 
 printShape('Square',3,'$');
