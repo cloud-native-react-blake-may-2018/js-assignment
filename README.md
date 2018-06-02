@@ -1,9 +1,3 @@
-```css
-span {
-  color: #d3d3d3;
-}
-```
-
 # Javascript assignment
 
 Includes two assignments dealing with javascript on the server and browser.
