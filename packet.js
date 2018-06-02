@@ -68,9 +68,12 @@ const reverseStr = someStr => {
 const factorial = someNum => {
   if (someNum === 0) return 1
   else return someNum * factorial(someNum - 1)
+
+  console.log('never gets here')
 }
+
 // factorials: 4 * 3 * 2 * 1 = 24
-// console.log(factorial(4))
+console.log(factorial(4))
 
 // 5. Substring
 // Define function substring(someStr, length, offset)
@@ -83,7 +86,7 @@ const substring = (someStr, length, offset) => {
 
   return someStr.substr(offset, length)
 }
-// console.log(substring('channel', 3, 2))
+console.log(substring('channel', 3, 0))
 
 // 6. Even Number
 // Define function: isEven(someNum)
@@ -146,8 +149,11 @@ const printShape = (shape, height, character) => {
       break
 
     case 'diamond':
-      // let spaceLimiter = Math.ceil(height / 2) + 1
-      let spaceLimiter = height
+      /*
+      i: 1 
+      j: 
+      x: 0
+      */
 
       for (
         let i = 1, j = height * 2 + 1, x = 0;
@@ -166,7 +172,7 @@ const printShape = (shape, height, character) => {
 }
 // printShape('square', 5, 'x')
 // printShape('triangle', 10, '~')
-// printShape('diamond', 9, '.')
+printShape('diamond', 9, '.')
 
 // 9. Object literal
 // Define function traverseObject(someObj)
@@ -221,7 +227,10 @@ function Person(name, age) {
 // 	var john = getPerson("John", 30);
 
 function getPerson(name, age) {
-  return new Person(name, age)
+  return {
+    name,
+    age
+  }
 }
 // var john = getPerson('John', 30)
 // console.log(john)
