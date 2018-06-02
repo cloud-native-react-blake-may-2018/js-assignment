@@ -4,7 +4,8 @@
   "description": "",
   "main": "packet.js",
   "scripts": {
-    "start": "babel-watch packet.js"
+    "cli": "babel-watch packet.js",
+    "web": "open index.html"
   },
   "keywords": [],
   "author": "",

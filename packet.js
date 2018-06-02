@@ -25,7 +25,12 @@ const fib = n => {
   // return nth position of fibonacci sequence
   return output[n]
 }
-// console.log(fib(4))
+console.log(`+------------------------------
+
+  1.  Fibonacci:
+      input:  4
+      output: ${fib(4)}
+   `)
 
 // 2. Bubble Sort
 // Define function: bubbleSort(numArray)
@@ -50,7 +55,13 @@ const bubbleSort = numArray => {
   }
   return items
 }
-// let randomInts = [1, 3, 2, 18, 12, 6]
+let randomInts = [1, 3, 2, 18, 12, 6]
+console.log(`+------------------------------
+
+  2.  Bubble sort:
+      input:  let randomInts = [1, 3, 2, 18, 12, 6]
+      output: ${bubbleSort(randomInts)}
+   `)
 // console.log(bubbleSort(randomInts))
 
 // 3. Reverse String
@@ -60,6 +71,12 @@ const reverseStr = someStr => {
   // es6 destructuring
   return [...someStr].reverse().join('')
 }
+console.log(`+------------------------------
+
+  3.  Reverse string:
+      input:  quantum leap
+      output: ${reverseStr('quantum leap')}
+   `)
 // console.log(reverseStr('Hi'))
 
 // 4. Factorial
@@ -73,7 +90,13 @@ const factorial = someNum => {
 }
 
 // factorials: 4 * 3 * 2 * 1 = 24
-console.log(factorial(4))
+console.log(`+------------------------------
+
+  4.  factorial:
+      input:  6
+      output: ${factorial(6)}
+   `)
+// console.log(factorial(4))
 
 // 5. Substring
 // Define function substring(someStr, length, offset)
@@ -86,7 +109,13 @@ const substring = (someStr, length, offset) => {
 
   return someStr.substr(offset, length)
 }
-console.log(substring('channel', 3, 0))
+console.log(`+------------------------------
+
+  5.  Substring:
+      input:  particle
+      output: ${substring('particle', 3, 1)}
+   `)
+// console.log(substring('channel', 3, 0))
 
 // 6. Even Number
 // Define function: isEven(someNum)
@@ -102,6 +131,12 @@ const isEven = someNum => {
   }
   return false
 }
+console.log(`+------------------------------
+
+  6.  Even number:
+      input:  19
+      output: ${isEven(19)}
+   `)
 // console.log(isEven(19))
 
 // 7. Palindrome
@@ -111,6 +146,12 @@ const isPalindrome = someStr => {
   if (someStr === [...someStr].reverse().join('')) return true
   else return false
 }
+console.log(`+------------------------------
+
+  7.  Palindrome:
+      input:  racecar
+      output: ${isPalindrome('racecar')}
+   `)
 
 // 8. Shapes
 // Define function: printShape(shape, height, character)
@@ -133,6 +174,12 @@ const isPalindrome = someStr => {
 // *****
 //  ***
 //   *
+console.log(`+------------------------------
+
+  8.  Shapes:
+      input:  square, triangle, diamond
+      output:
+   `)
 const printShape = (shape, height, character) => {
   shape = shape.toLowerCase()
   switch (shape) {
@@ -170,20 +217,36 @@ const printShape = (shape, height, character) => {
       }
   }
 }
-// printShape('square', 5, 'x')
-// printShape('triangle', 10, '~')
+
+printShape('square', 5, 'x')
+printShape('triangle', 7, '~')
 printShape('diamond', 9, '.')
+
+console.log(`+------------------------------
+
+  9.  Traverse object:
+      input:  traverseObject({ name: 'Eric', age: 22, birthplace: 'NY' })
+      output:
+   `)
 
 // 9. Object literal
 // Define function traverseObject(someObj)
 // Print every property and it's value.
 const traverseObject = someObj => {
   for (let i in someObj) {
-    console.log(`${i}: ${someObj[i]}`)
+    console.log(`${i}: ${someObj[i]}
+    `)
   }
 }
-// traverseObject({ name: 'Eric', age: 22, birthplace: 'NY' })
 
+traverseObject({ name: 'Eric', age: 22, birthplace: 'NY' })
+
+console.log(`+------------------------------
+
+  10. Delete elmement:
+      input:  deleteElement([0, 1, 2, 3, 4])
+      output:
+   `)
 // 10. Delete Element
 // Define function deleteElement(someArr)
 // Print length
@@ -191,11 +254,19 @@ const traverseObject = someObj => {
 // Print length
 // The lengths should be the same.
 const deleteElement = someArr => {
-  console.log(someArr.length)
+  console.log('length: ', someArr.length)
   delete someArr[2]
-  console.log(someArr.length)
+  console.log('length: ', someArr.length)
 }
+console.log(`${deleteElement([0, 1, 2, 3, 4])}`)
 // deleteElement([0, 1, 2, 3, 4])
+
+console.log(`+------------------------------
+
+  11. Splice element:
+      input:  spliceElement([0, 1, 2, 3, 4])
+      output:
+   `)
 
 // 11. Splice Element
 // Define function spliceElement(someArr)
@@ -204,10 +275,11 @@ const deleteElement = someArr => {
 // Print length
 // The lengths should be one less than the original length.
 const spliceElement = someArr => {
-  console.log(someArr.length)
+  console.log('length: ', someArr.length)
   someArr.splice(2, 1)
-  console.log(someArr.length)
+  console.log('length: ', someArr.length)
 }
+spliceElement([0, 1, 2, 3, 4])
 // spliceElement([0, 1, 2, 3, 4])
 
 // 12. Defining an object using a constructor
@@ -218,6 +290,14 @@ function Person(name, age) {
   this.name = name
   this.age = age
 }
+console.log(`+------------------------------
+
+  12. Object constructor:
+      input:  var john = new Person('John', 30)
+      output:
+   `)
+var john = new Person('John', 30)
+console.log(john)
 // var john = new Person('John', 30)
 // console.log(john)
 
@@ -232,5 +312,13 @@ function getPerson(name, age) {
     age
   }
 }
+console.log(`+------------------------------
+
+  13. Object literal:
+      input:  var john = getPerson('John', 30)
+      output:
+   `)
+var john = getPerson('John', 30)
+console.log(john)
 // var john = getPerson('John', 30)
 // console.log(john)
