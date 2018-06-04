@@ -115,7 +115,7 @@ function favoriteColor()    {  //Changes the backgroundColor... technically.  Bu
     const selectedColor = document.querySelector(`option[value="${colorSelect.value}"`);
     alert (`So you like ${selectedColor.innerHTML} more than ${previous} now?`);
     previous = selectedColor.innerHTML;
-    let radioColors = document.querySelectorAll('input[name="favoriteColor"]');
+    let radioColors = document.getElementsByName('favoriteColor');
     for (let i=0; i<radioColors.length; i++) {
         radioColors[i].style.backgroundColor = "selectedColor.innerHTML";
     }
@@ -131,17 +131,8 @@ function employeeToggle(specific) {  //Doesn't reveal again
     for (let i=0; i<employees.length; i++) {
         if (employees[i].innerHTML === specific) specified = employees[i];
     }
-    if (specified.style.visibility === "visible" || specified.style.visibility === "") { specified.style.visibility = "hidden"; }
-    else { specified.style.visibility = "visible"; }
-}
-function reveal(specific) {
-    let employees = document.getElementsByClassName('empName');
-    let specified;
-    for (let i=0; i<employees.length; i++) {
-        if (employees[i].innerHTML === specific) { specified = employees[i]; }
-    }
-    alert(specified)
-    if (specified.style.visibility === "hidden") { specified.style.visibility = "visible"; }
+    if (specified.style.color === "black" || specified.style.color === "") { specified.style.color = "white"; }
+    else { specified.style.color = "black"; }
 }
 /*10. Current Time
 Regarding this element:
@@ -193,7 +184,7 @@ This function should traverse every node in the DOM. Use recursion.
 On each node, call func(node).*/
 arrElem = [];
 function addElem(node) {
-    arrElem.push(node);
+    arrElem.push(node.toString());
 }
 function walkTheDOM(node, func) {
     func(node);
@@ -205,5 +196,5 @@ function walkTheDOM(node, func) {
         node = node.nextSibling;
         walkTheDOM(node,addElem);
     }
-    return arrElem.toString();
+    alert (arrElem.toString());
 }
