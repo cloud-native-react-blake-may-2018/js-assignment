@@ -17,8 +17,7 @@
         </div>
         <div>
             <h1>United
-                <span data-customAttr="USA">States</span> of America (
-                <span id="usa">USA</span>)</h1>
+                <span data-customAttr="USA">States</span> of America (<span id="usa">USA</span>)</h1>
             <div>
                 <a>Click Here</a>
                 <a>Click Here</a>
@@ -53,23 +52,23 @@
                     <td>Sales</td>
                 </tr>
                 <tr>
-                    <td class="empName">Amy</td>
+                    <td class="empName" onmouseover="showHide(this)">Amy</td>
                     <td>Finance</td>
                 </tr>
                 <tr>
-                    <td class="empName">Austin</td>
+                    <td class="empName" onmouseover="showHide(this)">Austin</td>
                     <td>Sales</td>
                 </tr>
                 <tr>
-                    <td class="empName">Katie</td>
+                    <td class="empName" onmouseover="showHide(this)">Katie</td>
                     <td>Marketing</td>
                 </tr>
                 <tr>
-                    <td class="empName" data-customAttr="court">Courtney</td>
+                    <td class="empName" data-customAttr="court" onmouseover="showHide(this)">Courtney</td>
                     <td>Sales</td>
                 </tr>
                 <tr>
-                    <td class="empName">Scout</td>
+                    <td class="empName" onmouseover="showHide(this)">Scout</td>
                     <td>Sales</td>
                 </tr>
             </table>
@@ -139,14 +138,14 @@
         // getCustomAttribute()
         // colorEvent();
         currentTime();
-        walkTheDOM(document.body, function (node) {
-            if (node.nodeType === 3) { // Is it a Text node?
-                var text = node.data.trim();
-                if (text.length > 0) { // Does it have non white-space text content?
-                    console.log(text);
-                }
-            }
-        });
+        // walkTheDOM(document.body, function (node) {
+        //     if (node.nodeType === 3) { // Is it a Text node?
+        //         var text = node.data.trim();
+        //         if (text.length > 0) { // Does it have non white-space text content?
+        //             console.log(text);
+        //         }
+        //     }
+        // });
     </script>
 
 </body>

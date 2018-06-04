@@ -118,14 +118,22 @@ function skillSelect() {
 // Make the background color (of all favoriteColor radio buttons) the newly selected favoriteColor
 
 function colorEvent(newColor) {
-    let color = document.body.style.backgroundColor;
+    let colors = document.getElementsByName('favoriteColor');//document.body.style.backgroundColor;
+    let oldColor = document.getElementsByName('favoriteColor')[0].style.backgroundColor;
+    // for(let elem of oldColor) {
+    //     console.log(elem);
+    // }
+    console.log(oldColor);
 
-    if (color === '') {
-        color = 'white';
+    if (oldColor === '') {
+        oldColor = 'white';
     }
 
-    alert(`So you like ${newColor} more that ${color} now?`);
-    document.body.style.backgroundColor = newColor;
+    alert(`So you like ${newColor} more that ${oldColor} now?`);
+    for (let elem of colors) {
+        elem.style.backgroundColor = newColor;
+    }
+    // document.body.style.backgroundColor = newColor;
 }
 
 // 9. Show/Hide Event
@@ -134,14 +142,11 @@ function colorEvent(newColor) {
 //     Hide the name if shown.
 //     Show the name if hidden.
 
-
-// Not working properly
 function showHide(emp) {
-    console.log('here');
-    if (emp.style.display === "none") {
-        emp.style.visibility = "collapse";
+    if (emp.style.color === '' || emp.style.color === 'black') {
+        emp.style.color = 'white';
     } else {
-        emp.style.display = "none";
+        emp.style.color = 'black';
     }
 }
 
