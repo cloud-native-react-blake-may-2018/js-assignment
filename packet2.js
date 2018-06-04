@@ -9,6 +9,8 @@
 // -----------------------------------------------------------------------------------
 
 //Button Creator for Testing
+//  -Javascript is independent of HTML file; no changes to HTML code was written
+
 let newDiv = document.createElement("div"); 
 let newContent = document.createTextNode("Test Buttons: ");
 newDiv.appendChild(newContent);
@@ -308,7 +310,6 @@ function walkTheDom(){
             k++
         }
     }
-    // DFS(document.childNodes[1])
     DFS(document)
 }
     
