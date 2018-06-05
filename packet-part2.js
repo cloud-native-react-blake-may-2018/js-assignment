@@ -127,27 +127,30 @@ function cssAlert() {
 
 let radColors = document.getElementsByName("favoriteColor");
 
-let old = 'white';
-let newColor = ''; 
-console.log(radColors[2]);
 //for(var i = 0, max = radColors.length; i < max; i++) {
-    radColors[2].onchange(alert('boom'));
-    //    addEventListener("select", , false); 
-    //radColors[1].onclick(changeButtons()); 
+    //radColors[i].addEventListener("click", changeButtons(), false); 
+    
+    /*these event listeners all send the alert when page is loaded,
+    not when radio is clicked/changed/selected.
+    Furthermore, I inexplicably cannot access radColors[i].value,
+    an essential piece in completing this exercise. (I have checked in the console that the field is occupied) 
+    */
 //}
-function changeButtons() {
+//let old = 'white';
+//let newColor = ''; 
+
+//function changeButtons() {
     // for (var i = 0, l = radColors.length; i < l; i++) {
     //     if(radColors[i].checked) {
-            
+    //         newColor = radColors[i].value;
     //         break;
     //     }
     // }
-     newColor = radColors[2].value;
-    alert(`So you like ${newColor} more than ${old} now?`);
-    old = newColor; 
-}
+    // alert(`So you like ${newColor} more than ${old} now?`);
+    // old = newColor; 
+    //code to change item colors
+//}
 
-//radColors.addEventListener("select", changeButtons(), false);
 // 10. Current Time
 // Regarding this element:
 // 	<h5 id="currentTime"></h5>
@@ -202,14 +205,14 @@ function walkTheDOM(node, func) {
     func(node); 
 }
 
-// let button = document.createElement("button");
-// button.innerHTML = "Walk the DOM";
-// var body = document.getElementsByTagName("body")[0];
-// body.appendChild(button);
-// button.addEventListener ("click", tryWalk(), false);
+let button = document.createElement("button");
+button.innerHTML = "Walk the DOM";
+var body = document.getElementsByTagName("body")[0];
+body.appendChild(button);
+button.addEventListener ("click", tryWalk(), false);
 
-// function tryWalk() { 
-//     walkTheDOM(document.documentElement, (node) => {
-//         console.log(node.innerText);
-//     });
-// }
+function tryWalk() { 
+    walkTheDOM(document.documentElement, (node) => {
+        console.log(node.innerText);
+    });
+}
