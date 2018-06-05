@@ -230,11 +230,13 @@ numLis2.addEventListener('change', sumNum)
            alert(`So you like ${radioOpt[i].value} more than ${oldColor}  now? `)
            
            oldColor = radioOpt[i].value; 
+           let label = document.getElementsById('label1');
+           label.style.ground = oldColor;
             }
             
                 for (let y =0 ; y< radioOpt.length ; y++){
                   
-                  radioOpt[y].style.background  = oldColor;
+                  radioOpt[y].style.color  = oldColor;
 
 
                 }
@@ -305,12 +307,12 @@ hours+=12;
 
 }
 
-if( t2.getHours() < 24 ){
+if( t2.getHours() > 23 ){
 
   
   amPM= 'AM'
   
-  }else if(t2.getHours() >= 12 ) {
+  }else if(t2.getHours() >= 11 ) {
   
   amPM= 'PM'
   }
